@@ -9,6 +9,10 @@ public class Main {
 		pattern3(5);
 		pattern4(5);
 		pattern5(5);
+		pattern6(5);
+		pattern7(5);
+		pattern8(5);
+
 
 	}
 	
@@ -82,6 +86,57 @@ public class Main {
 		}
 	}
 	
-
+	
+	static void pattern6(int n) {
+		
+		System.out.println("Pattern 6");
+		
+		for(int rows=1;rows<=n;rows++) {
+			for(int colum=1;colum<=n-rows; colum++) {
+				System.out.print(" ");
+				
+			}
+			for(int colum=1;colum<=rows; colum++) {
+				System.out.print("*");
+				
+			}
+			System.out.println();
+		} 
+	}
+	
+	
+	static void pattern7(int n) {
+		
+		System.out.println("Pattern 7");
+		
+		for(int rows=n;rows>=1;rows--) {
+			for(int colum=1;colum<=n-rows; colum++) {
+				System.out.print(" ");
+				
+			}
+			for(int colum=rows;colum>=1;colum--) {
+				System.out.print("*");
+				
+			}
+			System.out.println();
 			
+		}
+	}
+	
+	
+	
+	static void pattern8(int n) {
+		System.out.println("Pattern 8");
+		
+		for(int rows=1,colum=0;rows<=n;++rows,colum=0){
+			for(int space=1;space<=n-rows;++space){
+				System.out.print(" ");
+			}
+			while(colum!=2*rows-1){
+				System.out.print("*");
+				++colum;
+			}
+			System.out.println();
+		}
+	}			
 }
